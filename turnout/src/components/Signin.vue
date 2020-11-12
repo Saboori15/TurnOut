@@ -3,8 +3,8 @@
     <div class="">
         <h3>Sign In </h3> 
         <div class="form-group">
-            <input class="form-control" type="text" placeholder="Email" v-model="email" >
-            <input class="form-control" type="password" placeholder="Password" v-model="password" >
+            <input class="form-control t-box" type="text" placeholder="Email" v-model="email" >
+            <input class="form-control t-box" type="password" placeholder="Password" v-model="password" >
             <button class="btn btn-primary" @click="signIn">Sign in</button>
             <br>
             <br>

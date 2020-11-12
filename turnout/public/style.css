@@ -9,6 +9,7 @@ body{
     text-align: center;
     color:black;
     margin-top:60px;
+    padding:60px;
 
 }
 .character-card{
@@ -26,4 +27,13 @@ body{
     padding: 5px;
     padding-bottom: 10px;
     cursor: pointer;
+}
+
+.sign-out{
+    float: right;
+    margin-right: 60px;
+}
+
+.t-box{
+    margin:10px;
 }

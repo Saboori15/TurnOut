@@ -8,6 +8,7 @@ Vue.config.productionTip = false
 
 firebaseApp.auth().onAuthStateChanged(user => {
   if(user){
+    store.dispatch('signIn',user)
     router.push('./Dashboard')
   }
   else{
