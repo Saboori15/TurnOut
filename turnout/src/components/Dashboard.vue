@@ -1,13 +1,15 @@
 <template>
-    <div class="">
-        Events section
+    <div class="">  
         <button class="btn btn-danger btn-sm sign-out" @click=signOut>Sign Out</button>
        <br>
-        {{$store.state.user.uid}}
+        <AddEvents></AddEvents>
+       <event-item></event-item>
     </div>
 </template>
 <script>
-import {firebaseApp} from '../firebaseApp'
+import {firebaseApp, eventsRef} from '../firebaseApp'
+import AddEvents from './AddEvents.vue'
+import eventItem from './eventItem.vue'
 export default {
     methods:{
         signOut(){
@@ -15,6 +17,19 @@ export default {
             firebaseApp.auth().signOut()
 
         }
+    },
+    components:{
+        AddEvents,
+        eventItem
+    },
+    mounted(){
+        eventsRef.on('value',snap =>{
+            let events =[]
+            snap.forEach(event => {
+                events.push(event.val())
+                this.$store.dispatch('setEvents',events)
+            })
+        })
     }
 }
 </script>

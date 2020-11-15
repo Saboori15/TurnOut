@@ -9,7 +9,7 @@ body{
     text-align: center;
     color:black;
     margin-top:60px;
-    padding:60px;
+    
 
 }
 .character-card{
@@ -36,4 +36,16 @@ body{
 
 .t-box{
     margin:10px;
+}
+
+button{
+    margin:10px;
+}
+form{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+h3{
+    
 }
